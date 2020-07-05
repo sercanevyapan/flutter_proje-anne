@@ -24,10 +24,10 @@ class _VideoListState extends State<VideoList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Youtube Video Listem'),
-        backgroundColor: Colors.purple,
-      ),
+      //appBar: AppBar(
+        //title: Text('Youtube Video Listem'),
+        //backgroundColor: Colors.purple,
+      //),
       body: ListView.separated(
         itemBuilder: (context, index) {
           return YoutubePlayer(

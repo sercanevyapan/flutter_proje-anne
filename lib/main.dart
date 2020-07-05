@@ -1,5 +1,6 @@
 import 'package:animated_splash/animated_splash.dart';
 import 'package:flutter/material.dart';
+import 'package:proje_anne/tabs/anket.dart';
 import 'package:proje_anne/tabs/motivation.dart';
 import 'package:proje_anne/tabs/videolist.dart';
 
@@ -33,7 +34,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
     super.initState();
 
     // Initialize the Tab Controller
-    controller = TabController(length: 2, vsync: this);
+    controller = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -56,13 +57,12 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
       // Set the TabBar view as the body of the Scaffold
       body: TabBarView(
         // Add tabs as widgets
-        children: <Widget>[Motivation(), VideoList()],
+        children: <Widget>[Motivation(), VideoList(), Anket()],
         // set the controller
         controller: controller,
       ),
       // Set the bottom navigation bar
       bottomNavigationBar: Material(
-        
         // set the color of the bottom navigation bar
         color: Colors.purple,
         // set the tab bar as the child of bottom navigation bar
@@ -71,10 +71,14 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
           tabs: <Tab>[
             Tab(
               // set icon to the tab
-              icon: Icon(Icons.format_quote),
-              text: "Motivasyon Sözü",
+              icon: Icon(Icons.format_quote), text: "Motivasyon"
             ),
-            Tab(icon: Icon(Icons.video_library), text: "Videolar"),
+            Tab(
+              icon: Icon(Icons.video_library), text: "Videolar"
+            ),
+             Tab(
+              icon: Icon(Icons.question_answer), text: "Anket"
+            ),
           ],
           // setup the controller
           controller: controller,

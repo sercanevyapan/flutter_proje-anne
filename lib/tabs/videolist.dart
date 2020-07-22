@@ -2,6 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+void main() {
+  runApp(MaterialApp(
+
+      // Title
+      title: "Using Tabs",
+      // Home
+      home: VideoList()));
+}
+
 /// Creates list of video players
 class VideoList extends StatefulWidget {
   @override

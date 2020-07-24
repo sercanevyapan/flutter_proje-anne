@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:loading/indicator/ball_scale_multiple_indicator.dart';
-import 'package:loading/loading.dart';
+
 
 void main() {
   runApp(MaterialApp(
@@ -61,11 +60,13 @@ class MotivationState extends State<Motivation> {
             stream: Firestore.instance.collection('motivation').snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData)
-                return Loading(
-                  indicator: BallScaleMultipleIndicator(),
-                  size: 100.0,
-                  color: Colors.purpleAccent,
-                );
+                return Text('Yükleniyor..',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.purpleAccent,
+                    ));
 
               return Text(snapshot.data.documents[0]['motivasyonsozu'],
                   textAlign: TextAlign.center,

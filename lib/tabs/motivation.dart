@@ -61,11 +61,13 @@ class MotivationState extends State<Motivation> {
             stream: Firestore.instance.collection('motivation').snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData)
-                return Loading(
-                  indicator: BallScaleMultipleIndicator(),
-                  size: 100.0,
-                  color: Colors.purpleAccent,
-                );
+                return Text('Yükleniyor..',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.purpleAccent,
+                    ));
 
               return Text(snapshot.data.documents[0]['motivasyonsozu'],
                   textAlign: TextAlign.center,

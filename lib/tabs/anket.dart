@@ -37,5 +37,3 @@ class Anket extends StatelessWidget {
     }
   }
 }
-
-

@@ -56,8 +56,13 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
       ),
       // Set the TabBar view as the body of the Scaffold
       body: TabBarView(
+        physics: NeverScrollableScrollPhysics(),
         // Add tabs as widgets
-        children: <Widget>[Motivation(), VideoList(), Anket()],
+        children: <Widget>[
+          Motivation(),
+          VideoList(),
+          Anket(),
+        ],
         // set the controller
         controller: controller,
       ),
@@ -70,15 +75,11 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
           indicatorColor: Colors.white,
           tabs: <Tab>[
             Tab(
-              // set icon to the tab
-              icon: Icon(Icons.format_quote), text: "Motivasyon"
-            ),
-            Tab(
-              icon: Icon(Icons.video_library), text: "Videolar"
-            ),
-             Tab(
-              icon: Icon(Icons.question_answer), text: "Anket"
-            ),
+                // set icon to the tab
+                icon: Icon(Icons.format_quote),
+                text: "Motivasyon"),
+            Tab(icon: Icon(Icons.video_library), text: "Videolar"),
+            Tab(icon: Icon(Icons.question_answer), text: "Anket"),
           ],
           // setup the controller
           controller: controller,

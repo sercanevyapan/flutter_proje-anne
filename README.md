@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-![GitHub Logo](https://github.com/sercanevyapan/flutter_proje_anne/blob/master/screenshots/flutter_01.png) ![GitHub Logo](https://github.com/sercanevyapan/flutter_proje_anne/blob/master/screenshots/flutter_02.png)![GitHub Logo](https://github.com/sercanevyapan/flutter_proje_anne/blob/master/screenshots/flutter_03.png)
+![GitHub Logo](https://github.com/sercanevyapan/flutter_proje_anne/blob/master/screenshots/flutter_01.png)   ![GitHub Logo](https://github.com/sercanevyapan/flutter_proje_anne/blob/master/screenshots/flutter_02.png)   ![GitHub Logo](https://github.com/sercanevyapan/flutter_proje_anne/blob/master/screenshots/flutter_03.png)
 
 
 

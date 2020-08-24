@@ -2,12 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
-
 void main() {
   runApp(MaterialApp(
 
-      // Title
-      title: "Using Tabs",
       // Home
       home: Motivation()));
 }
@@ -68,13 +65,19 @@ class MotivationState extends State<Motivation> {
                       color: Colors.purpleAccent,
                     ));
 
-              return Text(snapshot.data.documents[0]['motivasyonsozu'],
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w900,
-                      color: Colors.purpleAccent,
-                      fontFamily: 'Comfortaa'));
+              return Card(
+                margin: EdgeInsets.all(16.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(snapshot.data.documents[0]['motivasyonsozu'],
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.purpleAccent,
+                          fontFamily: 'Comfortaa')),
+                ),
+              );
             },
           ),
         ),

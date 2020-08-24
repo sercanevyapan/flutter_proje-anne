@@ -4,9 +4,6 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() {
   runApp(MaterialApp(
-
-      // Title
-      title: "Using Tabs",
       // Home
       home: VideoList()));
 }

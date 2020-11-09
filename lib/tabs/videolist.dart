@@ -15,18 +15,26 @@ class VideoList extends StatefulWidget {
 }
 
 class _VideoListState extends State<VideoList> {
-  final List<YoutubePlayerController> _controllers =
-      ['b7AC2d4Tzmg', 'b7AC2d4Tzmg', 'b7AC2d4Tzmg', 'b7AC2d4Tzmg']
-          .map<YoutubePlayerController>(
-            (videoId) => YoutubePlayerController(
-              initialVideoId: videoId,
-              flags: YoutubePlayerFlags(
-                autoPlay: false,
-                enableCaption: true,
-              ),
-            ),
-          )
-          .toList();
+  final List<YoutubePlayerController> _controllers = [
+    'b7AC2d4Tzmg',
+    'ei9QZJrK_Oo',
+    'vadYqR3wcRw',
+    'JlQqipt6kwk',
+    'ssfDS6I4aCc',
+    'wnYFxu97Js8',
+    'ao3lorooQXU',
+    '28kIgEUx_vk'
+  ]
+      .map<YoutubePlayerController>(
+        (videoId) => YoutubePlayerController(
+          initialVideoId: videoId,
+          flags: YoutubePlayerFlags(
+            autoPlay: false,
+            enableCaption: true,
+          ),
+        ),
+      )
+      .toList();
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ void main() {
   runApp(MaterialApp(
     // Title
     title: "Using Tabs",
-
+    debugShowCheckedModeBanner: false,
     home: AnimatedSplash(
       imagePath: 'assets/logoapp.png',
       home: MyHome(),
